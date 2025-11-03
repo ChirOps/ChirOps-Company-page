@@ -1,117 +1,98 @@
-import Link from "next/link";
+import { ChirOpsLogo } from "@/components/chirops-logo"
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react"
 
-export const Footer = () => {
-  const navigationItems = [
-    {
-      title: "Home",
-      href: "/",
-      description: "",
-    },
-    {
-      title: "Servicios",
-      description: "Managing a small business today is already tough.",
-      items: [
-        {
-          title: "Catálogos Web",
-        },
-        {
-          title: "Landing Pages",
-        },
-        {
-          title: "E-Comerce",
-        },
-        {
-          title: "Identidad de Marca",
-        },
-        {
-          title: "Asesoría Técnica",
-        },
-      ],
-    },
-    {
-    //   title: "Company",
-    //   description: "Managing a small business today is already tough.",
-    //   items: [
-    //     {
-    //       title: "About us",
-    //       href: "/about",
-    //     },
-    //     {
-    //       title: "Fundraising",
-    //       href: "/fundraising",
-    //     },
-    //     {
-    //       title: "Investors",
-    //       href: "/investors",
-    //     },
-    //     {
-    //       title: "Contact us",
-    //       href: "/contact",
-    //     },
-    //   ],
-    },
-  ];
-
+export function Footer() {
   return (
-    <div className="w-full py-20 lg:py-40 bg-foreground text-background">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          <div className="flex gap-8 flex-col items-start">
-            <div className="flex gap-2 flex-col">
-              <h1 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
-                ChirOps
-              </h1>
-              <p className="text-lg max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                Managing a small business today is already tough.
-              </p>
-            </div>
-            <div className="flex gap-20 flex-row">
-              <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <p>1 Tailwind Way</p>
-                <p>Menlo Park</p>
-                <p>CA 94025</p>
-              </div>
-              <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <Link href="/">Terms of service</Link>
-                <Link href="/">Privacy Policy</Link>
-              </div>
-            </div>
+    <footer className="bg-black text-white py-8 md:py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-8">
+          <div>
+            <ChirOpsLogo className=""  />
+            <p className="text-xl md:text-2xl font-bold">ChirOps</p>
           </div>
-          <div className="grid lg:grid-cols-3 gap-10 items-start">
-            {navigationItems.map((item) => (
-              <div
-                key={item.title}
-                className="flex text-base gap-1 flex-col items-start"
-              >
-                <div className="flex flex-col gap-2">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      className="flex justify-between items-center"
-                    >
-                      <span className="text-xl">{item.title}</span>
-                    </Link>
-                  ) : (
-                    <p className="text-xl">{item.title}</p>
-                  )}
-                  {item.items &&
-                    item.items.map((subItem) => (
-                      <p
-                        key={subItem.title}
-                        // href={subItem.href}
-                        className="flex justify-between items-center"
-                      >
-                        <span className="text-background/75">
-                          {subItem.title}
-                        </span>
-                      </p>
-                    ))}
-                </div>
-              </div>
-            ))}
+
+          <div>
+            <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4" style={{ color: "#D946EF" }}>
+              ENLACES RÁPIDOS
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-purple-400 transition-colors text-sm md:text-base"
+                  style={{ color: "#D946EF" }}
+                >
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-purple-400 transition-colors text-sm md:text-base"
+                  style={{ color: "#D946EF" }}
+                >
+                  Sobre Nosotros
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-purple-400 transition-colors text-sm md:text-base"
+                  style={{ color: "#D946EF" }}
+                >
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-purple-400 transition-colors text-sm md:text-base"
+                  style={{ color: "#D946EF" }}
+                >
+                  Contáctanos
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div className="flex gap-3 md:gap-4 mb-6 md:mb-8">
+          <a
+            href="#"
+            className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="Twitter"
+          >
+            <Twitter className="w-4 h-4 md:w-5 md:h-5" />
+          </a>
+          <a
+            href="#"
+            className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="Facebook"
+          >
+            <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+          </a>
+          <a
+            href="#"
+            className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-4 h-4 md:w-5 md:h-5" />
+          </a>
+          <a
+            href="#"
+            className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="YouTube"
+          >
+            <Youtube className="w-4 h-4 md:w-5 md:h-5" />
+          </a>
+        </div>
+
+        <div className="border-t border-gray-800 pt-6 md:pt-8">
+          <p className="text-xs md:text-sm text-gray-400 text-center">
+            © 2025 ChirOps. Todos los derechos reservados.
+          </p>
+        </div>
       </div>
-    </div>
-  );
-};
+    </footer>
+  )
+}

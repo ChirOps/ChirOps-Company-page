@@ -72,7 +72,7 @@ export default function DecorativeGraphWhite() {
       </div>
 
       {/* Centro izquierda - Círculos concéntricos */}
-      <div className="absolute left-0 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 z-0">
+      <div className="hidden sm:block absolute left-0 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 z-0">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="h-48 w-48 rounded-full border-2 border-white/30" />
           <div className="absolute h-32 w-32 rounded-full border-2 border-white/40" />
@@ -81,7 +81,7 @@ export default function DecorativeGraphWhite() {
       </div>
 
       {/* Centro derecha - Cuadrados rotados */}
-      <div className="absolute right-0 top-1/2 h-80 w-80 translate-x-1/2 -translate-y-1/2 z-0">
+      <div className="hidden sm:block absolute right-0 top-1/2 h-80 w-80 translate-x-1/2 -translate-y-1/2 z-0">
         <div className="absolute inset-0 rotate-30">
           <div className="h-56 w-56 border-2 border-white/30" />
         </div>

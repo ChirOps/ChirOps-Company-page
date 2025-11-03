@@ -11,8 +11,9 @@ import { Globe, CardSim, ShoppingCart, Figma, ServerCog } from "lucide-react";
 
 export default function ServicesSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
-      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30">
+    <>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8 px-5 sm:px-14">
+      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30 hover:scale-105 hover:shadow-[#f09eff] transition-all duration-300 ease-out">
         <CardHeader>
           <CardTitle>
             <Globe className="w-10 h-10 text-[#6f3096] mb-5" />
@@ -26,7 +27,7 @@ export default function ServicesSection() {
           </p>
         </CardContent>
       </Card>
-      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30">
+      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30 hover:scale-105 hover:shadow-[#f09eff] transition-all duration-300 ease-out">
         <CardHeader>
           <CardTitle>
             <CardSim className="w-10 h-10 text-[#6f3096] mb-5" />
@@ -40,7 +41,7 @@ export default function ServicesSection() {
           </p>
         </CardContent>
       </Card>
-      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30">
+      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30 hover:scale-105 hover:shadow-[#f09eff] transition-all duration-300 ease-out">
         <CardHeader>
           <CardTitle>
             <ShoppingCart className="w-10 h-10 text-[#6f3096] mb-5" />
@@ -54,7 +55,11 @@ export default function ServicesSection() {
           </p>
         </CardContent>
       </Card>
-      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30">
+    </div>
+
+
+    <div className="grid sm:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8 mx-auto px-5 sm:px-14">
+      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30 hover:scale-105 hover:shadow-[#f09eff] transition-all duration-300 ease-out">
         <CardHeader>
           <CardTitle>
             <Figma className="w-10 h-10 text-[#6f3096] mb-5" />
@@ -68,7 +73,7 @@ export default function ServicesSection() {
           </p>
         </CardContent>
       </Card>
-      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30">
+      <Card className="p-5 bg-white border-0 shadow-lg shadow-[#6f3096]/30 hover:scale-105 hover:shadow-[#f09eff] transition-all duration-300 ease-out">
         <CardHeader>
           <CardTitle>
             <ServerCog className="w-10 h-10 text-[#6f3096] mb-5" />
@@ -83,5 +88,10 @@ export default function ServicesSection() {
         </CardContent>
       </Card>
     </div>
+    
+    </>
+    
+
+    
   );
 }
