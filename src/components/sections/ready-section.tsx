@@ -5,14 +5,14 @@ import useWhatsAppRedirect from "../hook/useWhatsAppRedirect";
 export default function ReadySection() {
   const phoneNumber = "+5354006464";
   const message =
-    "Hola!. He visto su página y me interesa su cartera de servicios y quisiera conocer más, podría ayudarme?";
+    "¡Hola!. He visto la página de ChirOps, me interesa su cartera de servicios y quisiera conocer más. ¿Podría ayudarme?";
   const target = "_blank";
   return (
     <div className="flex flex-col w-full place-items-center justify-center">
-      <span className="text-4xl sm:text-7xl text-white md:max-w-[50%] text-center mb-10">
+      <span className="text-4xl lg:text-7xl text-white sm:max-w-[60%] md:max-w-[50%] text-center mb-10">
         ¿Listo para llevar tu negocio al siguiente nivel?
       </span>
-      <span className="text-lg sm:text-xl md:max-w-[40%] text-center text-white mb-10">
+      <span className="text-lg sm:text-xl max-w-[80%] sm:max-w-[50%] text-center text-white mb-10">
         Desarrollo de software especializado para emprendimientos y negocios que
         necesitan destacar en la web
       </span>
